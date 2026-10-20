@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Uma carta e um vídeo de motivação para os estudantes da EJA. Nunca é tarde para aprender.">
+<meta property="og:title" content="Uma carta para você, estudante da EJA">
+<meta property="og:description" content="Você voltou para a escola. Isso já é uma vitória.">
+<meta property="og:image" content="https://pedagogiadalari.github.io/carta-eja/video-capa.jpg">
+<meta property="og:url" content="https://pedagogiadalari.github.io/carta-eja/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#15223F">
+<style>
+:root { color-scheme: light; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; font: 14px/1.5 system-ui, sans-serif; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+</style>
+<title>Carta aos Estudantes da EJA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Kalam:wght@700&display=swap">
+<style>
+/* Layout: uma coluna de leitura. O topo divide frase + desenho da escola à noite com janelas acesas; a carta fica numa folha de caderno. */
+:root {
+  --bg: #F2F5FA;
+  --surface: #FFFFFF;
+  --ink: #15223F;
+  --muted: #4B5A7A;
+  --accent: #A35F00;
+  --lamp: #FFC23D;
+  --lamp-soft: rgba(255, 194, 61, .28);
+  --window-off: #3A4A74;
+  --building: #1C2B50;
+  --sky-1: #C9D8F1;
+  --sky-2: #EEF3FB;
+  --moon: #FFFFFF;
+  --rule: #D3DCEB;
+  --margin-line: #E59A9A;
+  --btn-bg: #15223F;
+  --btn-fg: #FFFFFF;
+  --btn2-bg: #E3EAF6;
+  --focus: #A35F00;
+
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", Verdana, "Segoe UI", system-ui, sans-serif;
+  --font-hand: "Kalam", "Segoe Print", "Comic Sans MS", cursive;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0C1530;
+    --surface: #131E3C;
+    --ink: #EDF1F9;
+    --muted: #A9B5D0;
+    --accent: #FFC94A;
+    --lamp: #FFC94A;
+    --lamp-soft: rgba(255, 201, 74, .22);
+    --window-off: #24325C;
+    --building: #1A2649;
+    --sky-1: #060D21;
+    --sky-2: #14224D;
+    --moon: #FFF3C9;
+    --rule: #233259;
+    --margin-line: #8E4757;
+    --btn-bg: #FFC94A;
+    --btn-fg: #101932;
+    --btn2-bg: #1C2A50;
+    --focus: #FFC94A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0C1530;
+  --surface: #131E3C;
+  --ink: #EDF1F9;
+  --muted: #A9B5D0;
+  --accent: #FFC94A;
+  --lamp: #FFC94A;
+  --lamp-soft: rgba(255, 201, 74, .22);
+  --window-off: #24325C;
+  --building: #1A2649;
+  --sky-1: #060D21;
+  --sky-2: #14224D;
+  --moon: #FFF3C9;
+  --rule: #233259;
+  --margin-line: #8E4757;
+  --btn-bg: #FFC94A;
+  --btn-fg: #101932;
+  --btn2-bg: #1C2A50;
+  --focus: #FFC94A;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.1875rem;
+  line-height: 1.65;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1040px; margin: 0 auto; }
+h1, h2 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.08; letter-spacing: -0.015em; }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
+
+.eyebrow {
+  font-size: .82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--accent);
+}
+
+/* Topo */
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(24px, 5vw, 56px);
+  align-items: center;
+  padding-block: clamp(32px, 7vw, 80px) clamp(24px, 5vw, 56px);
+}
+.hero-text { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
+.hero h1 { font-size: clamp(2.3rem, 5.6vw, 3.9rem); font-weight: 800; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.lead { font-size: 1.25rem; color: var(--muted); max-width: 34ch; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; padding-top: 4px; }
+.btn {
+  font: 700 1.05rem/1 var(--font-body);
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 16px 22px;
+  border-radius: 999px;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  min-height: 52px;
+}
+.btn.secondary { background: var(--btn2-bg); color: var(--ink); }
+.btn svg { width: 22px; height: 22px; flex: none; }
+.btn:hover { filter: brightness(1.08); }
+.btn[aria-pressed="true"] { background: var(--lamp); color: #101932; }
+
+.art { min-width: 0; }
+.art svg { display: block; width: 100%; height: auto; max-width: 100%; border-radius: 22px; }
+.star { animation: brilho 3.2s ease-in-out infinite; }
+.win { fill: var(--lamp); animation: acende .6s ease-out both; animation-delay: var(--d, 0s); }
+@keyframes acende { from { fill: var(--window-off); } to { fill: var(--lamp); } }
+@keyframes brilho { 0%, 100% { opacity: .85; } 50% { opacity: .25; } }
+
+/* Vídeo */
+.video-sec {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-block: clamp(8px, 2vw, 16px) clamp(40px, 7vw, 72px);
+  display: flex; flex-direction: column; gap: 18px;
+}
+.video-sec h2 { font-size: clamp(1.5rem, 3vw, 1.9rem); }
+.video-sec p { color: var(--muted); max-width: 60ch; }
+.video-sec video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  background: #0C1530;
+}
+
+/* Carta */
+.letter-sec { padding-block: clamp(16px, 4vw, 40px); }
+.paper {
+  max-width: 760px;
+  margin: 0 auto;
+  background-color: var(--surface);
+  background-image:
+    linear-gradient(to right, transparent 54px, var(--margin-line) 54px, var(--margin-line) 56px, transparent 56px),
+    repeating-linear-gradient(to bottom, transparent 0, transparent calc(2.1rem - 1px), var(--rule) calc(2.1rem - 1px), var(--rule) 2.1rem);
+  background-position: 0 0, 0 1.2rem;
+  border-radius: 6px 6px 18px 18px;
+  box-shadow: 0 1px 0 var(--rule), 0 18px 40px -24px rgba(10, 20, 50, .35);
+  padding: clamp(28px, 5vw, 48px) clamp(20px, 5vw, 56px) clamp(32px, 5vw, 52px) 76px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.1rem;
+  line-height: 2.1rem;
+  font-size: 1.22rem;
+}
+.paper h2 { font-size: clamp(1.6rem, 3.4vw, 2.1rem); line-height: 2.1rem; padding-top: .35rem; }
+.paper .greet { font-weight: 700; }
+.paper .strong { font-weight: 700; color: var(--accent); }
+.sign { font-family: var(--font-hand); font-size: 1.6rem; color: var(--accent); line-height: 2.1rem; }
+
+/* Lembrete */
+.reminder {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-block: clamp(48px, 8vw, 88px) clamp(24px, 4vw, 40px);
+  display: flex; flex-direction: column; gap: 22px;
+}
+.reminder h2 { font-size: clamp(1.5rem, 3vw, 1.9rem); }
+.phrase-box {
+  display: flex; flex-direction: column; gap: 22px;
+  border-left: 6px solid var(--lamp);
+  padding: 6px 0 6px 24px;
+}
+.phrase {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4.6vw, 2.8rem);
+  line-height: 1.15;
+  text-wrap: balance;
+  min-height: 2.3em;
+  transition: opacity .25s ease;
+}
+.phrase.fade { opacity: 0; }
+.phrase-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; }
+.count { color: var(--muted); font-size: 1rem; font-variant-numeric: tabular-nums; }
+
+/* Paulo Freire */
+.history {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-block: clamp(40px, 7vw, 72px);
+  display: flex; flex-direction: column; gap: 20px;
+}
+.history h2 { font-size: clamp(1.5rem, 3vw, 1.9rem); }
+.history p { max-width: 62ch; }
+blockquote {
+  margin: 8px 0 0;
+  padding: 24px 26px;
+  background: var(--lamp-soft);
+  border-radius: 16px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+blockquote p { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.3rem, 2.8vw, 1.6rem); line-height: 1.3; }
+blockquote cite { font-style: normal; color: var(--muted); font-size: 1rem; }
+
+/* Final */
+.closing {
+  text-align: center;
+  padding-block: clamp(48px, 9vw, 96px) clamp(40px, 6vw, 64px);
+  display: flex; flex-direction: column; align-items: center; gap: 14px;
+  border-top: 1px solid var(--rule);
+}
+.closing h2 { font-size: clamp(2.4rem, 7vw, 4.4rem); font-weight: 800; }
+.closing h2 span { color: var(--accent); }
+.closing p { color: var(--muted); font-size: 1.15rem; }
+footer { text-align: center; color: var(--muted); font-size: .95rem; padding-block: 0 40px; }
+
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; }
+  .art { order: -1; }
+  .paper {
+    padding-left: 44px;
+    background-image:
+      linear-gradient(to right, transparent 26px, var(--margin-line) 26px, var(--margin-line) 28px, transparent 28px),
+      repeating-linear-gradient(to bottom, transparent 0, transparent calc(2.1rem - 1px), var(--rule) calc(2.1rem - 1px), var(--rule) 2.1rem);
+    font-size: 1.15rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .star, .win { animation: none; }
+  .phrase { transition: none; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="hero-text">
+      <span class="eyebrow">Para você, estudante da EJA</span>
+      <h1>Você voltou para a escola. <em>Isso já é uma vitória.</em></h1>
+      <p class="lead">Um recado para quem chega à aula depois de um dia inteiro de trabalho e, mesmo cansado, abre o caderno.</p>
+      <div class="actions">
+        <a class="btn" href="#video">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg>
+          Ver o vídeo
+        </a>
+        <a class="btn secondary" href="#carta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="m4 6 8 6 8-6"/></svg>
+          Ler a carta
+        </a>
+        <button class="btn secondary" id="ouvir" type="button" aria-pressed="false" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+          <span>Ouvir a carta</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="art">
+      <svg viewBox="0 0 420 320" role="img" aria-label="Desenho de uma escola à noite com todas as janelas acesas">
+        <defs>
+          <linearGradient id="ceu" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" style="stop-color: var(--sky-1)"/>
+            <stop offset="1" style="stop-color: var(--sky-2)"/>
+          </linearGradient>
+          <radialGradient id="halo" cx=".5" cy=".5" r=".5">
+            <stop offset="0" style="stop-color: var(--lamp); stop-opacity: .55"/>
+            <stop offset="1" style="stop-color: var(--lamp); stop-opacity: 0"/>
+          </radialGradient>
+        </defs>
+        <rect width="420" height="320" fill="url(#ceu)"/>
+        <circle cx="344" cy="62" r="40" fill="var(--moon)" opacity=".18"/>
+        <circle cx="344" cy="62" r="22" fill="var(--moon)"/>
+        <g fill="var(--moon)">
+          <circle class="star" cx="48" cy="40" r="2"/>
+          <circle class="star" cx="104" cy="74" r="1.6" style="animation-delay:.8s"/>
+          <circle class="star" cx="150" cy="30" r="2.2" style="animation-delay:1.6s"/>
+          <circle class="star" cx="262" cy="44" r="1.8" style="animation-delay:.4s"/>
+          <circle class="star" cx="300" cy="108" r="1.5" style="animation-delay:2.1s"/>
+          <circle class="star" cx="392" cy="128" r="1.8" style="animation-delay:1.2s"/>
+          <circle class="star" cx="26" cy="112" r="1.5" style="animation-delay:2.6s"/>
+        </g>
+        <ellipse cx="210" cy="232" rx="210" ry="110" fill="url(#halo)"/>
+        <rect x="0" y="292" width="420" height="28" fill="var(--building)" opacity=".55"/>
+        <line x1="210" y1="72" x2="210" y2="26" stroke="var(--building)" stroke-width="3"/>
+        <path d="M210 27h30l-6 8 6 8h-30z" fill="var(--lamp)"/>
+        <polygon points="48,134 210,70 372,134" fill="var(--building)"/>
+        <rect x="60" y="132" width="300" height="162" fill="var(--building)"/>
+        <circle cx="210" cy="108" r="12" class="win" style="--d:1.9s"/>
+        <g>
+          <rect class="win" x="75" y="148" width="30" height="34" rx="2" style="--d:.2s"/>
+          <rect class="win" x="123" y="148" width="30" height="34" rx="2" style="--d:.9s"/>
+          <rect class="win" x="171" y="148" width="30" height="34" rx="2" style="--d:.5s"/>
+          <rect class="win" x="219" y="148" width="30" height="34" rx="2" style="--d:1.3s"/>
+          <rect class="win" x="267" y="148" width="30" height="34" rx="2" style="--d:.35s"/>
+          <rect class="win" x="315" y="148" width="30" height="34" rx="2" style="--d:1.1s"/>
+          <rect class="win" x="75" y="196" width="30" height="34" rx="2" style="--d:1.5s"/>
+          <rect class="win" x="123" y="196" width="30" height="34" rx="2" style="--d:.65s"/>
+          <rect class="win" x="171" y="196" width="30" height="34" rx="2" style="--d:1.7s"/>
+          <rect class="win" x="219" y="196" width="30" height="34" rx="2" style="--d:.8s"/>
+          <rect class="win" x="267" y="196" width="30" height="34" rx="2" style="--d:1.4s"/>
+          <rect class="win" x="315" y="196" width="30" height="34" rx="2" style="--d:.45s"/>
+          <rect class="win" x="75" y="244" width="30" height="34" rx="2" style="--d:1s"/>
+          <rect class="win" x="123" y="244" width="30" height="34" rx="2" style="--d:1.6s"/>
+          <rect class="win" x="267" y="244" width="30" height="34" rx="2" style="--d:.7s"/>
+          <rect class="win" x="315" y="244" width="30" height="34" rx="2" style="--d:1.2s"/>
+          <rect class="win" x="190" y="240" width="40" height="54" rx="3" style="--d:2.1s"/>
+        </g>
+        <rect x="178" y="292" width="64" height="5" fill="var(--window-off)"/>
+      </svg>
+    </div>
+  </header>
+</div>
+
+<main>
+  <section class="video-sec" id="video" aria-labelledby="video-titulo">
+    <span class="eyebrow">Assista</span>
+    <h2 id="video-titulo">Um vídeo para você</h2>
+    <p>Dois minutos com o mesmo recado, falado e escrito. A palavra em amarelo acompanha a voz, para você ler junto.</p>
+    <video controls playsinline preload="metadata" poster="video-capa.jpg" src="video-motivacao-eja.mp4">
+      Seu celular não conseguiu abrir o vídeo.
+    </video>
+  </section>
+
+  <section class="letter-sec" id="carta">
+    <article class="paper" id="texto-carta">
+      <h2>Uma carta para você</h2>
+      <p class="greet">Querido estudante, querida estudante,</p>
+      <p>Talvez a vida tenha tirado você da escola cedo. Teve o trabalho, a casa, os filhos, a família para ajudar. Você não desistiu de aprender. A vida só pediu outras coisas primeiro.</p>
+      <p>Agora você está aqui, com o caderno aberto, depois de um dia que já foi longo. <span class="strong">Isso se chama coragem.</span></p>
+      <p>Não se compare com ninguém. Cada pessoa tem o seu tempo. Tem gente que entende de primeira e tem gente que precisa ver de novo, e de novo. As duas aprendem.</p>
+      <p>Errar faz parte. Quem erra está tentando. A borracha existe porque todo mundo erra, até o professor.</p>
+      <p>Você já sabe muita coisa. Faz conta de cabeça no mercado, mede, cozinha, constrói, cuida e resolve problemas todos os dias. A escola não começa do zero com você. Ela junta o que você já sabe com coisas novas.</p>
+      <p>Quando der vontade de parar, lembre por que você começou. Pode ser para ler a placa do ônibus, ajudar o neto na lição, tirar a carteira de motorista, conseguir um emprego melhor ou só provar para si mesmo que consegue. Todo motivo vale.</p>
+      <p>Nós estamos aqui para caminhar junto com você. Uma letra de cada vez, uma conta de cada vez, uma aula de cada vez.</p>
+      <p><span class="strong">Continue vindo. O seu lugar é aqui.</span></p>
+      <p class="sign">Com carinho, seus professores e professoras</p>
+    </article>
+  </section>
+
+  <section class="reminder" aria-labelledby="lembrete-titulo">
+    <span class="eyebrow">Guarde no celular</span>
+    <h2 id="lembrete-titulo">Lembrete para os dias difíceis</h2>
+    <div class="phrase-box">
+      <p class="phrase" id="frase" aria-live="polite">Devagar também se chega.</p>
+      <div class="phrase-meta">
+        <button class="btn" id="outra" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg>
+          Outra mensagem
+        </button>
+        <span class="count" id="contagem">Mensagem 1 de 12</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="history" aria-labelledby="historia-titulo">
+    <span class="eyebrow">Você não está sozinho</span>
+    <h2 id="historia-titulo">Muita gente já fez esse caminho</h2>
+    <p>Em 1963, na cidade de Angicos, no Rio Grande do Norte, cerca de 300 trabalhadores aprenderam a ler e a escrever em mais ou menos 40 horas de aula, com o educador Paulo Freire. As aulas partiam de palavras da vida deles, como <strong>ti-jo-lo</strong>. Para Freire, ninguém chega à escola vazio. Todo adulto já traz o que aprendeu vivendo.</p>
+    <blockquote>
+      <p>“Se a educação sozinha não transforma a sociedade, sem ela tampouco a sociedade muda.”</p>
+      <cite>Paulo Freire, no livro <i>Pedagogia da Indignação</i></cite>
+    </blockquote>
+  </section>
+
+  <section class="closing">
+    <h2>O seu lugar <span>é aqui.</span></h2>
+    <p>Até a próxima aula.</p>
+  </section>
+</main>
+
+<footer>Educação de Jovens e Adultos · Nunca é tarde para aprender</footer>
+
+<script>
+(function () {
+  var frases = [
+    "Devagar também se chega.",
+    "Cada aula que você vem é um passo a mais.",
+    "Errar é sinal de que você está tentando.",
+    "Você não está atrasado. Você está começando.",
+    "Cansado e mesmo assim aqui. Isso é força.",
+    "Uma letra hoje, uma palavra amanhã, um livro depois.",
+    "Perguntar não é vergonha. Ficar com a dúvida é que atrapalha.",
+    "Seus filhos e netos estão vendo o seu exemplo.",
+    "O seu tempo é o seu tempo.",
+    "Quem aprende a ler, ninguém segura.",
+    "Hoje difícil, amanhã um pouco mais fácil.",
+    "Você merece aprender. Sempre mereceu."
+  ];
+  var i = 0;
+  var frase = document.getElementById("frase");
+  var contagem = document.getElementById("contagem");
+  var reduz = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  document.getElementById("outra").addEventListener("click", function () {
+    i = (i + 1) % frases.length;
+    var troca = function () {
+      frase.textContent = frases[i];
+      contagem.textContent = "Mensagem " + (i + 1) + " de " + frases.length;
+      frase.classList.remove("fade");
+    };
+    if (reduz) { troca(); return; }
+    frase.classList.add("fade");
+    setTimeout(troca, 220);
+  });
+
+  // Leitura em voz alta, para quem ainda está aprendendo a ler
+  var ouvir = document.getElementById("ouvir");
+  var synth = window.speechSynthesis;
+  if (!synth || typeof SpeechSynthesisUtterance === "undefined") return;
+  ouvir.hidden = false;
+  var rotulo = ouvir.querySelector("span");
+  var falando = false;
+
+  function vozPt() {
+    var vozes = synth.getVoices() || [];
+    for (var k = 0; k < vozes.length; k++) if (/^pt[-_]BR/i.test(vozes[k].lang)) return vozes[k];
+    for (var j = 0; j < vozes.length; j++) if (/^pt/i.test(vozes[j].lang)) return vozes[j];
+    return null;
+  }
+  function parar() {
+    falando = false;
+    try { synth.cancel(); } catch (e) {}
+    ouvir.setAttribute("aria-pressed", "false");
+    rotulo.textContent = "Ouvir a carta";
+  }
+  ouvir.addEventListener("click", function () {
+    if (falando) { parar(); return; }
+    var partes = Array.prototype.map.call(
+      document.querySelectorAll("#texto-carta p"),
+      function (p) { return p.textContent.trim(); }
+    );
+    var voz = vozPt();
+    try { synth.cancel(); } catch (e) {}
+    falando = true;
+    ouvir.setAttribute("aria-pressed", "true");
+    rotulo.textContent = "Parar";
+    partes.forEach(function (texto, n) {
+      var u = new SpeechSynthesisUtterance(texto);
+      u.lang = "pt-BR";
+      if (voz) u.voice = voz;
+      u.rate = 0.92;
+      if (n === partes.length - 1) u.onend = parar;
+      u.onerror = function () { if (n === partes.length - 1) parar(); };
+      synth.speak(u);
+    });
+    document.getElementById("carta").scrollIntoView({ behavior: reduz ? "auto" : "smooth" });
+  });
+})();
+</script>
+</body>
+</html>
